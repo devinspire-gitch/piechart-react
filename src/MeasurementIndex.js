@@ -35,7 +35,7 @@ function MeasurementIndex() {
                     <PieChart className="chart_part"
                         data = {[
                             {title: 'GroupeOne', value: groupOne, color: '#E38627'},
-                            {title: 'GroupTwo', value: groupTwo, color: '#C13C37' },
+                            {title: 'GroupTwo', value: groupTwo, color: '#32a852' },
                         ]}
                     />
                     {resData.result.map( (result, index)=>                 
