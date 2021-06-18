@@ -26,28 +26,24 @@ function MeasurementIndex() {
              groupTwo += 1;
         }
      })     
-     console.log(resData.result.length, groupOne, groupTwo)
 
         return (
             <>
-            {resData.loading ? <div>loading...</div> :
-            <div>
-                <h1>Hello</h1>
-                <PieChart className="chart_part"
-                    data = {[
-                           {title: 'GroupeOne', value: groupOne, color: '#E38627'},
-                           {title: 'GroupTwo', value: groupTwo, color: '#C13C37' },
-                    ]}
-                />
-                {resData.result.map( (result, index)=>                 
-                   <li key={index}>Location: {result.location } - Result: {result.value} {result.unit}</li>
-                )}
-
-            </div> }
-            </>
-            
-        )
-        
+                {resData.loading ? <div>loading...</div> :
+                <div>
+                    <h1>Hello</h1>
+                    <PieChart className="chart_part"
+                        data = {[
+                            {title: 'GroupeOne', value: groupOne, color: '#E38627'},
+                            {title: 'GroupTwo', value: groupTwo, color: '#C13C37' },
+                        ]}
+                    />
+                    {resData.result.map( (result, index)=>                 
+                    <li key={index}>Location: {result.location } - Result: {result.value} {result.unit}</li>
+                    )}
+                </div>}
+            </>            
+        )        
     }
 
 export default MeasurementIndex
